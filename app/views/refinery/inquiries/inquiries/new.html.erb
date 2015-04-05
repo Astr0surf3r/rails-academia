@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="row">
+      <div class="col-lg-7 col-lg-offset-5">
+
+          <% content_for :body do %>
+            <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
+            <%= form_for [refinery, :inquiries, @inquiry] do |f| %>
+            <%= render :partial => "/refinery/admin/error_messages",
+                 :locals => {
+                   :object => @inquiry,
+                   :include_object_name => true
+                 } %>
+          <fieldset>
+            <legend class="text-center">Fill out this form</legend>
+            
+            
+            <!-- Name input-->
+            <div class="form-group">
+              
+              <div class="col-md-12">
+                <%= f.required_label :name, :class => 'placeholder-fallback' %> <br />
+        <%= f.text_field :name, 
+                          :class => 'text', 
+                          :required => 'required',
+                          :placeholder => t('name', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+              </div>
+            </div>
+    
+            <!-- Email input-->
+            <div class="form-group">
+              
+              <div class="col-md-12">
+                <%= f.required_label :email, :class => 'placeholder-fallback' %> <br />
+                <%= f.email_field :email, :class => 'text email', 
+                                          :required => 'required',
+                                          :placeholder => t('email', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+              </div>
+            </div>
+             
+             <% if Refinery::Inquiries.show_phone_number_field %>
+
+             <div class="form-group">
+              <div class="col-md-12">
+             <%= f.label :phone, :class => 'placeholder-fallback' %> <br />
+             <%= f.text_field :phone, :class => 'text phone',
+                                      :placeholder => t('phone', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+
+            </div>
+            </div>
+            <% end %>
+            <!-- Message body -->
+            <div class="form-group">
+              <div class="col-md-12">
+                <%= f.required_label :message, :class => 'placeholder-fallback' %> <br />
+                <%= f.text_area :message, :rows => 8, :required => 'required',
+          :placeholder => t('message', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %> <br /><br />
+              </div>
+            </div>
+           
+            <!-- Form actions -->
+            <div class="form-group">
+              <div class="col-md-12">
+                <%= f.submit t('.send') %>
+        <%= link_to t('.privacy_policy'), "/pages/privacy-policy", :id => "privacy_link" if Refinery::Inquiries.show_contact_privacy_link %>
+              </div>
+            </div>
+
+          </fieldset>
+          <% end %>
+         <% end %>
+        </div>
+    </div>
+  </div>
+      
+
+
+  
+
+   
+
+<%= render "/refinery/content_page" %>
