@@ -13,9 +13,14 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  #gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
+  
+  # added the the following line to add bootstrap 3 in a rails 3.x app 
+  gem 'compass-rails', '1.1.7'
+  gem 'sass-rails', '3.2.6'
+  gem 'bootstrap-sass', '~> 3.2.0'
+ 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
