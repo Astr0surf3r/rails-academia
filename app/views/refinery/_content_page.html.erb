@@ -1,6 +1,6 @@
 <div class="container">
-	<div class="row">
-		<div class="col-lg-12">
+  <div class="row">
+      <div class="col-lg-12">
 
 <%= render_content_page(@page, {
       :hide_sections => local_assigns[:hide_sections],
@@ -8,6 +8,6 @@
     }) %>
 <%= render '/refinery/draft_page_message' unless @page.try(:live?) -%>
 
-</div>
-</div>
+		</div>
+	</div>
 </div>

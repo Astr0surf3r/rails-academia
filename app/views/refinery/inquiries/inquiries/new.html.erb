@@ -1,6 +1,4 @@
-<div class="container">
-  <div class="row">
-      <div class="col-lg-7 col-lg-offset-5">
+
 
           <% content_for :body do %>
             <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
@@ -68,14 +66,5 @@
           </fieldset>
           <% end %>
          <% end %>
-        </div>
-    </div>
-  </div>
-      
-
-
-  
-
-   
 
 <%= render "/refinery/content_page" %>
