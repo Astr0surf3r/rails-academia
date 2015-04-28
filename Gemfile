@@ -20,7 +20,7 @@ group :assets do
   gem 'compass-rails', '1.1.7'
   gem 'sass-rails', '3.2.6'
   gem 'bootstrap-sass', '~> 3.2.0'
- 
+  gem 'font-awesome-rails', '~> 4.3.0.0'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
