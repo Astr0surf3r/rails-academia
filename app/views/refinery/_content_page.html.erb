@@ -4,5 +4,7 @@
       :hide_sections => local_assigns[:hide_sections],
       :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
     }) %>
+   
+   <%#=raw @page.content_for(:body) %> <%#=raw @page.content_for(:side_body) %>
 
 <%= render '/refinery/draft_page_message' unless @page.try(:live?) -%>

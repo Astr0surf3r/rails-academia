@@ -1,5 +1,4 @@
 
-
           <% content_for :body do %>
             <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
             <%= form_for [refinery, :inquiries, @inquiry] do |f| %>
@@ -8,6 +7,10 @@
                    :object => @inquiry,
                    :include_object_name => true
                  } %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+           <section id="contact">      
           <fieldset>
             <legend class="text-center">Fill out this form</legend>
             
@@ -66,5 +69,9 @@
           </fieldset>
           <% end %>
          <% end %>
+</section>
+</div>
+</div>
+</div>
 
 <%= render "/refinery/content_page" %>
