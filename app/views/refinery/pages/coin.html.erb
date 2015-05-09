@@ -1,0 +1,90 @@
+<% @pesos_12horas = 8000 %>
+<% @pesos_24horas = 14000 %>
+<% @curso_modulo = convert(@pesos_12horas) %>
+<% @curso_modulo_dos = convert(@pesos_24horas) %>
+<header class="intro-header" style="background-image: url('img/macbook-air-all-faded-and-stuff.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Buscas una clase de Ruby On Rails?</h1>
+                        <hr class="small" />
+                        <span class="subheading">Estas en la pagina justa!</span>
+<br /> <br />
+                         <a href="#cursos" class="btn btn-primary btn-xl page-scroll">Escoge tu Curso</a> <br /><br /><br /><br />
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</header>
+
+
+<section id="cursos">
+<div class="container">
+<div class="row">
+  <div class="col-md-4">
+  <div class="panel panel-danger">
+     <div class="panel-heading"><h3 class="text-center">Curso<br />BASICO</h3>
+</div>
+         <div class="panel-body text-center">
+			<p class="lead" style="font-size:40px"><strong>$ <%= @pesos_12horas %> pesos<br />BTC <%= @curso_modulo %></strong>
+</p>
+		</div>
+                       <ul class="list-group list-group-flush text-center">
+							<li class="list-group-item"><em class="icon-ok text-danger"></em> clase máximo 10 personas</li>
+							<li class="list-group-item"><em class="icon-ok text-danger"></em> 12 horas</li>
+							<li class="list-group-item"><em class="icon-ok text-danger"></em> lección en clase</li>
+						</ul>
+    <p><a href="#basico" class="btn btn-lg btn-block btn-danger page-scroll" title="Temario Curso Ruby On Rails Basico">Quiero saber mas &gt;&gt;</a>
+</p>
+ </div>
+
+  </div>
+   <div class="col-md-4">
+  <div class="panel panel-info">
+     <div class="panel-heading"><h3 class="text-center">Curso<br />INTERMEDIO</h3>
+</div>
+         <div class="panel-body text-center">
+			<p class="lead" style="font-size:40px"><strong>$ <%= @pesos_12horas %> pesos<br />BTC <%= @curso_modulo %></strong>
+</p>
+		</div>
+                       <ul class="list-group list-group-flush text-center">
+							<li class="list-group-item"><em class="icon-ok text-danger"></em> clase máximo 10 personas</li>
+							<li class="list-group-item"><em class="icon-ok text-danger"></em> 12 horas</li>
+							<li class="list-group-item"><em class="icon-ok text-danger"></em> lección en clase</li>
+						</ul>
+    <p><a class="btn btn-lg btn-block btn-danger page-scroll" href="#intermedio">Quiero saber mas &gt;&gt;</a>
+</p>
+ </div>
+
+  </div>
+   <div class="col-md-4">
+  <div class="panel panel-success">
+    <div class="panel-heading"><h3 class="text-center">Curso<br />Personalizado</h3>
+</div>
+         <div class="panel-body text-center">
+			<p class="lead" style="font-size:40px"><strong>$ <%= @pesos_24horas %> pesos</strong>
+<br /><strong>BTC <%= @curso_modulo_dos %></strong>
+</p>
+		</div>
+                       <ul class="list-group list-group-flush text-center">
+							<li class="list-group-item"><em class="icon-ok text-danger"></em>&#160;clase máximo 10 personas</li>
+<li class="list-group-item">&#160;24 horas</li>
+							<li class="list-group-item"><em class="icon-ok text-danger"></em> lección en clase</li>
+						</ul>
+    <p><a class="btn btn-lg btn-block btn-danger page-scroll" href="#desdecero">Quiero saber mas &gt;&gt;
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<%= render 'basico' %>
+
+<%= render 'intermedio' %>
+
+<%= render 'desdecero' %>

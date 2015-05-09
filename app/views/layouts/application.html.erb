@@ -6,12 +6,15 @@
   </head>
   <!-- <body id="page-top" id="<%#= canonical_id @page %>"> -->
   <body id="page-top">
-  
+
     <%#= render 'layouts/navbar' %>
     <%#= site_bar -%>
     <!-- <div id="page_container"> -->
       <!-- <header id="header"> -->
         <%= render "/refinery/header" -%>
+
+
+     
      <!--  </header> -->
       <!-- <section id="page"> -->
         <%= yield %>
@@ -20,6 +23,23 @@
         <%= render "/refinery/footer" -%>
       </footer>
     <!-- </div> -->
+
+
     <%= render "/refinery/javascripts" %>
+
+    <!-- BOTTOM LEFT RIBBON: START COPYING HERE -->
+    <div class="github-fork-ribbon-wrapper left-bottom">
+        <div class="github-fork-ribbon">
+            <a href="https://github.com/simonwhitaker/github-fork-ribbon-css">Fork me on GitHub</a>
+        </div>
+    </div>
+    <!-- BOTTOM LEFT RIBBON: END COPYING HERE -->
+    
+<div class="scroll-top-wrapper ">
+  <span class="scroll-top-inner">
+    <i class="fa fa-2x fa-arrow-circle-up"></i>
+  </span>
+</div>
+
   </body>
 </html>

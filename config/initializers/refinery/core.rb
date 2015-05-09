@@ -35,8 +35,7 @@ Refinery::Core.configure do |config|
   # config.dragonfly_secret = "13361fec2041f285e8a929021df85e148b09a2c7ac07fb50"
 
   # Add extra tags to the wymeditor whitelist e.g. = {'tag' => {'attributes' => {'1' => 'href'}}} or just {'tag' => {}}
-  config.wymeditor_whitelist_tags = nil
-
+  #config.wymeditor_whitelist_tags = {}
   # Register extra javascript for backend
   # config.register_javascript "prototype-rails"
 
